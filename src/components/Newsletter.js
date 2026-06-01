@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import './Newsletter.css';
 
 const Newsletter = () => {
-  
   const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email.trim()) setSubmitted(true);
-  };
 
   return (
     <section className="newsletter">
@@ -26,9 +20,9 @@ const Newsletter = () => {
         {submitted ? (
           <div className="nl-success">🎉 Thank you for subscribing!</div>
         ) : (
-          <form className="nl-form" onSubmit={handleSubmit}>
-            <button type="submit" className="nl-btn">Subscribe Now</button>
-          </form>
+          <button className="nl-btn" onClick={() => setSubmitted(true)}>
+            Subscribe Now
+          </button>
         )}
       </div>
     </section>
