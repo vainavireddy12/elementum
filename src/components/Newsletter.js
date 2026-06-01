@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Newsletter.css';
 
 const Newsletter = () => {
-  const [email, setEmail] = useState('');
+  
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
